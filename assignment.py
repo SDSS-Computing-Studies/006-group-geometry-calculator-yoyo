@@ -39,27 +39,27 @@ def getParams(shape):
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
     prompts = []
     if shape == "Rectangle":
-        prompts.append(("Enter the Width:"))
-        prompts.append(("Enter the Height:"))
+        prompts.append(("Enter the Width of Rectangle, must be an integer:"))
+        prompts.append(("Enter the Height of Rectangle, must be an integer:"))
     elif shape == "Circle":
-        prompts.append(("Enter the radius:"))
+        prompts.append(("Enter the radius of Circle, must be an integer:"))
     elif shape == "Triangle":
-        prompts.append(("Enter the First Side Length:"))
-        prompts.append(("Enter the Second Side Length:"))
-        prompts.append(("Enter the Third Side Length:"))
+        prompts.append(("Enter the First Side Length of Triangle, must be an integer:"))
+        prompts.append(("Enter the Second Side Length of Triangle, must be an integer:"))
+        prompts.append(("Enter the Third Side Length of Triangle, must be an integer:"))
     elif shape == "Regular Polygon":
-        prompts.append(("Enter the Number of Sides:"))
-        prompts.append(("Enter the Sides Length"))
+        prompts.append(("Enter the Number of Sides of Regular Polygon, must be an integer:"))
+        prompts.append(("Enter the Sides Length of Regular Polygon, must be an integer"))
     elif shape == "Cube":
-        prompts.append(("Enter the Side Length:"))
+        prompts.append(("Enter the Side Length of Cube, must be an integer:"))
     elif shape == "Cylinder":
-        prompts.append(("Enter the Height:"))
-        prompts.append(("Enter the Radius:"))
+        prompts.append(("Enter the Height of Cylinder, must be an integer:"))
+        prompts.append(("Enter the Radius of Cylinder, must be an integer:"))
     elif shape == "Sphere":
-        prompts.append(("Enter the Radius:"))
+        prompts.append(("Enter the Radius of Sphere, must be an integer:"))
     elif shape == "Cone":
-        prompts.append(("Enter the Radius:"))
-        prompts.append(("Enter the Height:"))
+        prompts.append(("Enter the Radius of Cone, must be an integer:"))
+        prompts.append(("Enter the Height of Cone, must be an integer:"))
     
 
     return prompts
@@ -97,7 +97,7 @@ def cube_surface_area(l):
     return l[0]^2 * 6
 
 def cylinder_surface_area(l):
-    print("Surface Area of Cylinder is :" , end = "")
+    print("Surface Area  of Cylinder is :" , end = "")
     return circle_area([l[1]]) * 2 + l[0] * l[1] * 2 * math.pi
 
 def sphere_volume(l):
